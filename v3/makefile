@@ -1,7 +1,7 @@
 all: sieve.o sieve.h test.c
 	gcc -lm -g test.c sieve.o -o test
 
-run: all 
+run:  
 	./test ${args}
 
 debug: all

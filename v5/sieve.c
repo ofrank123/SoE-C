@@ -13,9 +13,9 @@ int sieve(int n) {
   BYTE * nums = (BYTE *) calloc(1, l / 8);
   int i = 0;
   int curr;
-  int max = ODD_TO_IND((int) sqrt(l*2)) + 10;
+  int max = (int) sqrt(l*2);
   while(n-1) {
-    if(i < max) {
+    if(IND_TO_ODD(i) < max) {
       while(!~nums[i/8]) {
         i+=8;       
       }
