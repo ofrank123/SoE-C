@@ -1,5 +1,5 @@
 all: sieve.o sieve.h test.c
-	gcc -lm -g test.c sieve.o -o test
+	gcc -g test.c sieve.o -o test -lm
 
 run: 
 	./test ${args}
@@ -8,7 +8,7 @@ debug: all
 	gdb -tui test
 
 sieve.o: sieve.h sieve.c
-	gcc -lm -g -c sieve.c
+	gcc -g -c sieve.c -lm
 
 clean:
 	rm *.o test
